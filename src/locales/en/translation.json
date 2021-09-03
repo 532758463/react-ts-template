@@ -1,0 +1,11 @@
+{
+  "dashboard": {
+    "title": "React"
+  },
+  "basicLayout": {
+    "home": "主页"
+  },
+  "customer": {
+    "id": "id"
+  }
+}
