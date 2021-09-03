@@ -7,6 +7,7 @@
   "author": "xiaoyang",
   "license": "UNLICENSED",
   "scripts": {
+    "commit": "git-cz",
     "start": "deer start",
     "build": "deer build",
     "format": "deer format",
@@ -16,14 +17,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "git add . && lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -c .commitlintrc.js -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "eslint",
-      "git add ."
+      "eslint"
     ]
   },
   "dependencies": {
@@ -46,7 +47,10 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
-    "react-hot-loader": "^4.13.0"
+    "react-hot-loader": "^4.13.0",
+    "git-cz": "^4.7.6",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4"
   },
   "eslintConfig": {
     "extends": [
@@ -61,5 +65,10 @@
     "safari >= 7",
     "ios >= 6",
     "android >= 4"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  }
 }
