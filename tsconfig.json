@@ -8,9 +8,7 @@
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@locales/*": ["src/locales/*"],
-      "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
-      "@services/*": ["src/services/*"],
       "@utils/*": ["src/utils/*"]
     },
     "module": "esnext",

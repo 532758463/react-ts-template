@@ -11,11 +11,5 @@ ReactDOM.render(
   document.getElementById("app"),
 );
 
-// if ((module as any).hot) {
-//   (module as any).hot.accept(() => {
-//     render(App);
-//   });
-// }
-
 // TODO: 性能监控
 // reportWebVitals(console.log);
